@@ -1,0 +1,592 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------Navbar------------------------ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.dropdown-menu a:hover {
+    color: #ff9800;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+/* ------------------------Filter section---------------------------------------- */
+
+/* Filters Section */
+.filters-section {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .filters-section h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .filters-section .container {
+    width: 70%;
+  }
+
+  .filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .filter-item {
+    margin-bottom: 20px;
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+  
+  .filter-item label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .filter-item select,
+  .filter-item input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .filter-item button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .filter-item button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .filter-item {
+      flex: 1 1 45%;
+      max-width: 45%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .filter-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+    }
+  }
+  
+
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* --------------------------Order Summary-------------------------------------- */
+
+/* General Styles for Order Summary Section */
+.order-summary {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-summary h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  /* Orders Table */
+  .orders-table {
+    width: 90%;
+    justify-self: center;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .orders-table th,
+  .orders-table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  
+  .orders-table th {
+    background-color: #56606b;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .orders-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .orders-table tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  /* Status Styles */
+  .status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .status.pending {
+    background-color: #ffc107;
+  }
+  
+  .status.in-transit {
+    background-color: #17a2b8;
+  }
+  
+  .status.delivered {
+    background-color: #28a745;
+  }
+  
+  .status.delayed {
+    background-color: #dc3545;
+  }
+  
+  .status.canceled {
+    background-color: #6c757d;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .orders-table th,
+    .orders-table td {
+      font-size: 12px;
+      padding: 8px;
+    }
+  
+    .orders-table {
+      font-size: 12px;
+      box-shadow: none;
+    }
+  
+    .order-summary h1 {
+      font-size: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .orders-table th,
+    .orders-table td {
+      font-size: 10px;
+      padding: 5px;
+    }
+  
+    .orders-table {
+      font-size: 10px;
+    }
+  
+    .order-summary h1 {
+      font-size: 18px;
+    }
+  }
+  
+
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------Recent orders---------------------------------- */
+
+/* Recent Orders Section */
+.recent-orders {
+    padding: 30px 0;
+    background-color: #fff;
+    width: 80%;
+    justify-self: center;
+  }
+  
+  .recent-orders h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .orders-list {
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  .order-details p {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .order-details p strong {
+    font-weight: bold;
+  }
+  
+  .view-details {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-details:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .order-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .view-details {
+      margin-top: 10px;
+    }
+  }
+  
+
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------Graph section------------------------------------ */
+
+/* Order Trends Section */
+.order-trends {
+    padding: 30px 0;
+    background-color: #fff;
+    width: 80%;
+    justify-self: center;
+  }
+  
+  .order-trends-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .chart-container {
+    width: 48%;
+    text-align: center;
+  }
+  
+  .chart-container h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .info-container {
+    width: 40%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .info-container h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .order-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .order-summary-table th, .order-summary-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .order-summary-table th {
+    background-color: #f4f4f4;
+    font-size: 18px;
+  }
+  
+  .order-summary-table td {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .order-trends-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .chart-container, .info-container {
+      width: 100%;
+    }
+  }
+
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #2a2a2a; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Logo Section */
+  .footer-logo img {
+    width: 120px; /* Adjust logo size */
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation Links */
+  .footer-nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #00bcd4; /* Hover color */
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .footer-content p {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #00bcd4; /* Hover color */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  
+    .footer-nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-links {
+      margin-top: 20px;
+    }
+  }
+  

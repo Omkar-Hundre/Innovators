@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Innovators</title>
+    <link rel="stylesheet" href="Assets/CSS/Homepage.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Dashboard</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory_page.html">Inventory</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <img src="Assets/Homepage/Profile.jpeg" alt="Profile" class="profile-icon">
+            <div class="dropdown-menu">
+                <a href="#profile">Profile</a>
+                <a href="#logout">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </nav>
+
+    <div class="key-metrics-section">
+        <div class="card">
+            <h3>Total Orders Fulfilled</h3>
+            <canvas id="ordersChart"></canvas>
+            <p>+15% compared to last month</p>
+        </div>
+        <div class="card">
+            <h3>On-Time Delivery Rate</h3>
+            <canvas id="deliveryRateChart"></canvas>
+            <p>95% this quarter</p>
+        </div>
+        <div class="card">
+            <h3>Current Inventory Value</h3>
+            <canvas id="inventoryChart"></canvas>
+            <p>$250K in stock</p>
+        </div>
+        <div class="card">
+            <h3>Average Delivery TAT</h3>
+            <canvas id="tatChart"></canvas>
+            <p>3.2 days average</p>
+        </div>
+        <div class="card">
+            <h3>Damage Rates</h3>
+            <canvas id="damageRatesChart"></canvas>
+        </div>
+        <div class="card">
+            <h3>Supplier Metrics</h3>
+            <canvas id="supplierMetricsChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Alerts/Notifications Section -->
+    <div class="alerts-section">
+        <h3>Alerts & Notifications</h3>
+        <div class="notifications-list">
+            <!-- Notification 1 - Unseen (Bold) -->
+            <div class="notification unseen">
+                <div class="notification-message">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span class="notification-text"><strong>Low inventory warning</strong> for Warehouse A. Restock ASAP!</span>
+                </div>
+                <div class="notification-time">2024-12-25 08:30 AM</div>
+            </div>
+        
+            <!-- Notification 2 - Seen (Normal Weight) -->
+            <div class="notification seen">
+                <div class="notification-message">
+                    <i class="fas fa-clock"></i>
+                    <span class="notification-text">Order #1284 delayed by 2 days. Customer notified.</span>
+                </div>
+                <div class="notification-time">2024-12-24 03:15 PM</div>
+            </div>
+        
+            <!-- Notification 3 - Unseen (Bold) -->
+            <div class="notification unseen">
+                <div class="notification-message">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="notification-text"><strong>Supplier quality issue</strong> for Batch #45. Inspection needed.</span>
+                </div>
+                <div class="notification-time">2024-12-23 11:45 AM</div>
+            </div>
+        
+            <!-- Notification 4 - Seen (Normal Weight) -->
+            <div class="notification seen">
+                <div class="notification-message">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <span class="notification-text">Delayed shipment for Project X. Expected delay: 3 days.</span>
+                </div>
+                <div class="notification-time">2024-12-22 06:00 PM</div>
+            </div>
+            <!-- Add more notifications as needed -->
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Footer Links -->
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <p>Designed & Developed By Team Innovators</p>
+        </div>
+    </footer>
+      
+  
+
+    <script src="Assets/JS/Homepage.js"></script>
+</body>
+</html>

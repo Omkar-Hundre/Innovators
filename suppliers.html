@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Innovators</title>
+    <link rel="stylesheet" href="Assets/CSS/suppliers.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Dashboard</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory_page.html">Inventory</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <img src="Assets/Homepage/Profile.jpeg" alt="Profile" class="profile-icon">
+            <div class="dropdown-menu">
+                <a href="#profile">Profile</a>
+                <a href="#logout">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </nav>
+
+
+    
+    <section class="supplier-list">
+        <div class="container">
+          <h1>Supplier List</h1>
+          <table class="supplier-table">
+            <thead>
+              <tr>
+                <th>Supplier Name</th>
+                <th>Average Delivery Time</th>
+                <th>Delivery Consistency</th>
+                <th>Quality Score</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alpha Supplies</td>
+                <td>3 Days</td>
+                <td>98%</td>
+                <td>4.8/5</td>
+              </tr>
+              <tr>
+                <td>Beta Manufacturing</td>
+                <td>5 Days</td>
+                <td>85%</td>
+                <td>4.2/5</td>
+              </tr>
+              <tr>
+                <td>Gamma Enterprises</td>
+                <td>2 Days</td>
+                <td>95%</td>
+                <td>4.7/5</td>
+              </tr>
+              <tr>
+                <td>Delta Solutions</td>
+                <td>4 Days</td>
+                <td>90%</td>
+                <td>4.5/5</td>
+              </tr>
+              <tr>
+                <td>Epsilon Trading</td>
+                <td>3 Days</td>
+                <td>92%</td>
+                <td>4.6/5</td>
+              </tr>
+              <tr>
+                <td>Zeta Industries</td>
+                <td>6 Days</td>
+                <td>80%</td>
+                <td>4.1/5</td>
+              </tr>
+              <tr>
+                <td>Eta Supplies</td>
+                <td>7 Days</td>
+                <td>75%</td>
+                <td>3.9/5</td>
+              </tr>
+              <tr>
+                <td>Theta Products</td>
+                <td>4 Days</td>
+                <td>88%</td>
+                <td>4.3/5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      
+
+      <section class="performance-comparison">
+        <div class="container">
+          <h2>Performance Comparison</h2>
+          <div class="chart-container">
+            <canvas id="supplierRadarChart"></canvas>
+          </div>
+          <div class="metrics-info">
+            <h3>Delivery and Quality Metrics</h3>
+            <table class="metrics-table">
+              <thead>
+                <tr>
+                  <th>Supplier Name</th>
+                  <th>Average Delivery Time</th>
+                  <th>Delivery Consistency</th>
+                  <th>Quality Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Alpha Supplies</td>
+                  <td>3 Days</td>
+                  <td>98%</td>
+                  <td>4.8/5</td>
+                </tr>
+                <tr>
+                  <td>Beta Manufacturing</td>
+                  <td>5 Days</td>
+                  <td>85%</td>
+                  <td>4.2/5</td>
+                </tr>
+                <tr>
+                  <td>Gamma Enterprises</td>
+                  <td>2 Days</td>
+                  <td>95%</td>
+                  <td>4.7/5</td>
+                </tr>
+                <tr>
+                  <td>Delta Solutions</td>
+                  <td>4 Days</td>
+                  <td>90%</td>
+                  <td>4.5/5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Footer Links -->
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <p>Designed & Developed By Team Innovators</p>
+        </div>
+    </footer>
+
+    <script src="Assets/JS/suppliers.js"></script>
+</body>
+</html>

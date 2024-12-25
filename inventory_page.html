@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Innovators</title>
+    <link rel="stylesheet" href="Assets/CSS/inventory_page.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Dashboard</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory_page.html">Inventory</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <img src="Assets/Homepage/Profile.jpeg" alt="Profile" class="profile-icon">
+            <div class="dropdown-menu">
+                <a href="#profile">Profile</a>
+                <a href="#logout">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </nav>
+
+    <section class="inventory-summary">
+        <div class="container">
+          <h1>Inventory Summary</h1>
+          
+          <div class="filters">
+            <!-- Warehouse Selector -->
+            <div class="warehouse-selector">
+              <label for="warehouse">Select Warehouse:</label>
+              <select id="warehouse">
+                <option value="warehouse-a">Warehouse A</option>
+                <option value="warehouse-b">Warehouse B</option>
+                <option value="warehouse-c">Warehouse C</option>
+              </select>
+            </div>
+          
+            <!-- Category Selector -->
+            <div class="warehouse-selector">
+              <label for="category">Select Category:</label>
+              <select id="category">
+                <option value="all">All Categories</option>
+                <option value="cement">Cement</option>
+                <option value="steel">Steel</option>
+                <option value="tiles">Tiles</option>
+                <option value="wood">Wood</option>
+                <option value="paint">Paint</option>
+                <option value="glass">Glass</option>
+                <option value="insulation">Insulation</option>
+                <option value="adhesives">Adhesives</option>
+              </select>
+            </div>
+          
+            <!-- Stock Status Selector -->
+            <div class="warehouse-selector">
+              <label for="stock-status">Select Stock Status:</label>
+              <select id="stock-status">
+                <option value="all">All Status</option>
+                <option value="in-stock">In Stock</option>
+                <option value="low-stock">Low Stock</option>
+                <option value="out-stock">Out of Stock</option>
+              </select>
+            </div>
+          </div>
+          
+          
+          
+          <!-- Inventory Table -->
+          <table class="inventory-table">
+            <thead>
+              <tr>
+                <th>SKU Name</th>
+                <th>Current Stock</th>
+                <th>Minimum Stock Level</th>
+                <th>Restock Status</th>
+              </tr>
+            </thead>
+            <tbody id="inventory-body">
+              <tr data-warehouse="warehouse-a">
+                <td>Cement - Grade A</td>
+                <td>250</td>
+                <td>100</td>
+                <td><span class="status in-stock">In Stock</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-b">
+                <td>Steel Bars - 12mm</td>
+                <td>75</td>
+                <td>150</td>
+                <td><span class="status low-stock">Low</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-c">
+                <td>Ceramic Tiles - White</td>
+                <td>0</td>
+                <td>50</td>
+                <td><span class="status out-stock">Out of Stock</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-a">
+                <td>Wood Planks - Oak</td>
+                <td>120</td>
+                <td>80</td>
+                <td><span class="status in-stock">In Stock</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-b">
+                <td>Paint - Red</td>
+                <td>40</td>
+                <td>30</td>
+                <td><span class="status in-stock">In Stock</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-c">
+                <td>Glass Panels - Tinted</td>
+                <td>20</td>
+                <td>50</td>
+                <td><span class="status low-stock">Low</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-a">
+                <td>Insulation Rolls</td>
+                <td>60</td>
+                <td>40</td>
+                <td><span class="status in-stock">In Stock</span></td>
+              </tr>
+              <tr data-warehouse="warehouse-b">
+                <td>Adhesives - Strong Bond</td>
+                <td>0</td>
+                <td>25</td>
+                <td><span class="status out-stock">Out of Stock</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </section>
+      
+      
+
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Footer Links -->
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <p>Designed & Developed By Team Innovators</p>
+        </div>
+    </footer>
+
+    <script src="Assets/JS/inventory_page.js"></script>
+
+</body>
+</html>

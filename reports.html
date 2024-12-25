@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Innovators</title>
+    <link rel="stylesheet" href="Assets/CSS/reports.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Dashboard</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory_page.html">Inventory</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <img src="Assets/Homepage/Profile.jpeg" alt="Profile" class="profile-icon">
+            <div class="dropdown-menu">
+                <a href="#profile">Profile</a>
+                <a href="#logout">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </nav>
+
+    <!-- Available Reports Section -->
+    <section class="available-reports">
+        <div class="container">
+            <h1>Available Reports</h1>
+            <table class="reports-table">
+                <thead>
+                    <tr>
+                        <th>Report Name</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monthly Order Fulfillment Report</td>
+                        <td>This report provides a detailed analysis of orders fulfilled each month.</td>
+                        <td><button class="view-btn">View</button> <button class="download-btn">Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>Inventory Turnover Report</td>
+                        <td>Shows the frequency of inventory turnover during a given period.</td>
+                        <td><button class="view-btn">View</button> <button class="download-btn">Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>Supplier Performance Report</td>
+                        <td>Evaluates the performance and reliability of suppliers based on various metrics.</td>
+                        <td><button class="view-btn">View</button> <button class="download-btn">Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>Customer Satisfaction Report</td>
+                        <td>Provides insights into customer feedback and satisfaction levels.</td>
+                        <td><button class="view-btn">View</button> <button class="download-btn">Download</button></td>
+                    </tr>
+                    <tr>
+                        <td>Quarterly Sales Report</td>
+                        <td>Summarizes the sales figures for each quarter.</td>
+                        <td><button class="view-btn">View</button> <button class="download-btn">Download</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
+    <!-- Report Preview Section -->
+    <section class="report-preview">
+        <div class="container">
+            <h2>Report Preview: Monthly Order Fulfillment</h2>
+            
+            <div class="preview-content">
+                <!-- Report Snapshot (Chart) -->
+                <div class="report-chart">
+                    <h3>Monthly Order Fulfillment Chart</h3>
+                    <div class="chart">
+                        <!-- Placeholder for the chart (can be implemented with a charting library like Chart.js) -->
+                        <canvas id="order-fulfillment-chart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Report Snapshot (Table) -->
+                <div class="report-table">
+                    <h3>Order Fulfillment Overview</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Orders Fulfilled</th>
+                                <th>Fulfillment Rate (%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>January</td>
+                                <td>150</td>
+                                <td>95%</td>
+                            </tr>
+                            <tr>
+                                <td>February</td>
+                                <td>120</td>
+                                <td>90%</td>
+                            </tr>
+                            <tr>
+                                <td>March</td>
+                                <td>200</td>
+                                <td>98%</td>
+                            </tr>
+                            <tr>
+                                <td>April</td>
+                                <td>175</td>
+                                <td>92%</td>
+                            </tr>
+                            <tr>
+                                <td>May</td>
+                                <td>160</td>
+                                <td>94%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Download Button -->
+            <div class="download-section">
+                <button class="download-btn">Download Report (PDF)</button>
+                <button class="download-btn">Download Report (CSV)</button>
+                <button class="download-btn">Download Report (Excel)</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Footer Links -->
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <p>Designed & Developed By Team Innovators</p>
+        </div>
+    </footer>
+      
+  
+
+    <script src="Assets/JS/reports.js"></script>
+</body>
+</html>

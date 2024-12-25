@@ -1,0 +1,462 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------Navbar------------------------ */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9800;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.dropdown-menu a:hover {
+    color: #ff9800;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+}
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ------------------------Available Reports Section------------------------ */
+
+.available-reports {
+  padding: 40px 10%;
+  background-color: #f9f9f9;
+}
+
+.available-reports .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.available-reports h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.reports-table th, .reports-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.reports-table thead th {
+  background-color: #333;
+  color: #fff;
+  font-weight: bold;
+}
+
+.reports-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.reports-table tbody tr:hover {
+  background-color: #f1f7ff;
+}
+
+.reports-table .view-btn,
+.reports-table .download-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.reports-table .view-btn:hover,
+.reports-table .download-btn:hover {
+  background-color: #0056b3;
+}
+
+.reports-table .download-btn {
+  background-color: #28a745;
+}
+
+.reports-table .download-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .available-reports h1 {
+      font-size: 22px;
+  }
+
+  .reports-table th, .reports-table td {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .reports-table .view-btn,
+  .reports-table .download-btn {
+      font-size: 14px;
+      padding: 6px 12px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* ------------------------Report Preview Section------------------------ */
+
+.report-preview {
+  padding: 40px 10%;
+  background-color: #f9f9f9;
+}
+
+.report-preview .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.report-preview h2 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333;
+}
+
+.preview-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Report Chart */
+.report-chart {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.report-chart h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Chart Placeholder */
+.chart {
+  width: 100%;
+  height: 300px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+/* Report Table */
+.report-table {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.report-table h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.report-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-table th, .report-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.report-table th {
+  background-color: #f4f4f4;
+  font-size: 18px;
+}
+
+.report-table td {
+  font-size: 16px;
+}
+
+.report-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.report-table tr:hover {
+  background-color: #f1f7ff;
+}
+
+/* Download Button Section */
+.download-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.download-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .preview-content {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  .report-chart, .report-table {
+      width: 100%;
+  }
+
+  .report-preview h2 {
+      font-size: 22px;
+  }
+
+  .download-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+}
+/* ---------------------------------------------------------------- */
+  
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #2a2a2a; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Logo Section */
+  .footer-logo img {
+    width: 120px; /* Adjust logo size */
+    margin-bottom: 10px;
+  }
+  
+  /* Navigation Links */
+  .footer-nav ul {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav ul li a:hover {
+    color: #00bcd4; /* Hover color */
+  }
+  
+  /* Footer Links */
+  .footer-links {
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .footer-content p {
+    margin-bottom: 10px;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+  }
+  
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #00bcd4; /* Hover color */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+    }
+  
+    .footer-nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .footer-links {
+      margin-top: 20px;
+    }
+  }
+  

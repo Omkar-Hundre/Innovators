@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Innovators</title>
+    <link rel="stylesheet" href="Assets/CSS/settings.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Dashboard</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="inventory_page.html">Inventory</a></li>
+            <li><a href="suppliers.html">Suppliers</a></li>
+            <li><a href="orders.html">Orders</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+        <div class="profile-dropdown">
+            <img src="Assets/Homepage/Profile.jpeg" alt="Profile" class="profile-icon">
+            <div class="dropdown-menu">
+                <a href="#profile">Profile</a>
+                <a href="#logout">Logout</a>
+            </div>
+        </div>
+        <div class="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+    </nav>
+
+
+    <!-- User Preferences Section -->
+    <div class="user-preferences">
+        <div class="container">
+            <h2>User Preferences</h2>
+            
+            <!-- Dark Mode Toggle -->
+            <div class="preference-item">
+                <label for="dark-mode-toggle" class="preference-label">Dark Mode</label>
+                <input type="checkbox" id="dark-mode-toggle" class="preference-toggle">
+            </div>
+
+            <!-- Language Selection -->
+            <div class="preference-item">
+                <label for="language-select" class="preference-label">Language</label>
+                <select id="language-select" class="preference-dropdown">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="it">Italian</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+      <!-- Dashboard Configuration Section -->
+    <div class="dashboard-configuration">
+        <div class="container">
+            <h2>Dashboard Configuration</h2>
+            
+            <!-- Enable/Disable KPIs -->
+            <div class="preference-item">
+                <label for="kpi-toggle" class="preference-label">Enable KPIs</label>
+                <input type="checkbox" id="kpi-toggle" class="preference-toggle">
+            </div>
+
+            <!-- Reorder Dashboard Widgets -->
+            <div class="preference-item">
+                <label for="reorder-widgets" class="preference-label">Reorder Dashboard Widgets</label>
+                <button id="reorder-widgets" class="preference-button">Reorder</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifications Settings Section -->
+    <div class="notifications-settings">
+        <div class="container">
+            <h2>Notifications Settings</h2>
+            
+            <!-- Low Inventory Notifications -->
+            <div class="preference-item">
+                <label for="low-inventory-notifications" class="preference-label">Low Inventory</label>
+                <input type="checkbox" id="low-inventory-notifications" class="preference-toggle">
+            </div>
+
+            <!-- Delayed Deliveries Notifications -->
+            <div class="preference-item">
+                <label for="delayed-deliveries-notifications" class="preference-label">Delayed Deliveries</label>
+                <input type="checkbox" id="delayed-deliveries-notifications" class="preference-toggle">
+            </div>
+
+            <!-- Supplier Quality Issues Notifications -->
+            <div class="preference-item">
+                <label for="supplier-quality-notifications" class="preference-label">Supplier Quality Issues</label>
+                <input type="checkbox" id="supplier-quality-notifications" class="preference-toggle">
+            </div>
+        </div>
+    </div>
+
+      
+      
+
+    <footer class="footer">
+        <div class="footer-content">
+          <!-- Footer Links -->
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+          </div>
+          <p>Designed & Developed By Team Innovators</p>
+        </div>
+    </footer>
+
+    <script src="Assets/JS/settings.js"></script>
+</body>
+</html>
